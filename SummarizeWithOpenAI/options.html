@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summarize With OpenAI - Options</title>
+  <style>
+    body { font-family: sans-serif; margin: 40px; }
+    label { display: block; margin-bottom: 8px; }
+    input[type="text"] { width: 100%; padding: 8px; margin-bottom: 16px; }
+    button { padding: 8px 16px; }
+    .status { margin-top: 12px; color: green; }
+  </style>
+</head>
+<body>
+  <h2>Summarize With OpenAI - Settings</h2>
+  <form id="api-key-form">
+    <label for="api-key">OpenAI API Key:</label>
+    <input type="text" id="api-key" name="api-key" placeholder="sk-..." required />
+    <button type="submit">Save</button>
+    <div class="status" id="status"></div>
+  </form>
+  <!-- Link to the options.js script -->
+  <script src="options.js"></script>
+</body>
+</html> 
