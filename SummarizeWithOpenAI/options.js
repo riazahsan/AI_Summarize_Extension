@@ -19,4 +19,19 @@ form.addEventListener('submit', (e) => {
     statusDiv.textContent = 'API key saved!';
     setTimeout(() => statusDiv.textContent = '', 2000);
   });
+});
+
+// Hotkey customization section
+const hotkeySpan = document.getElementById('current-hotkey');
+const openShortcutsBtn = document.getElementById('open-shortcuts');
+
+// Try to get the current hotkey (Chrome does not provide an API, so show the default)
+const defaultHotkey = (navigator.platform.includes('Mac')) ? 'Command+Shift+Y' : 'Ctrl+Shift+Y';
+hotkeySpan.textContent = defaultHotkey + ' (default)';
+
+// Open the Chrome shortcuts page when the button is clicked
+openShortcutsBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  // Open the Chrome shortcuts page in a new tab
+  chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
 }); 
