@@ -5,8 +5,7 @@
   "description": "Summarize the current page using OpenAI with a hotkey.",
   "permissions": [
     "activeTab",
-    "storage",
-    "scripting"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
